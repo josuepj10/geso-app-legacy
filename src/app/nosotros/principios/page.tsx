@@ -1,8 +1,14 @@
-"use client"
-
+import type { Metadata } from "next"
 import { Reveal } from "@/components/reveal"
 import ImageGESO from "@/components/imageGESO"
 import Principios from "@/components/nosotrosComponents/principios";
+
+export const metadata: Metadata = {
+  title: "Nuestros principios",
+  description:
+    "Los principios que guían a GESO: equidad e inclusión, derechos y democracia, innovación y conocimiento, y alianzas y transparencia.",
+  alternates: { canonical: "/nosotros/principios" },
+}
 
 export default function principiosPage() {
   return (

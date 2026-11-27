@@ -1,8 +1,14 @@
-"use client"
-
+import type { Metadata } from "next"
 import Cardinf from "@/components/proyectos/cardinf"
 import Cardinfrev from "@/components/proyectos/cardinfrev"
 
+
+export const metadata: Metadata = {
+  title: "Migración y derechos humanos",
+  description:
+    "Proyectos de GESO con REDNAM, la DGME, la OIT y la OIM sobre los derechos de las personas migrantes y refugiadas en Costa Rica.",
+  alternates: { canonical: "/proyectos/migracion-y-derechos-humanos" },
+}
 
 export default function MigracionPage() {
   const cards = [
@@ -25,7 +31,7 @@ export default function MigracionPage() {
       los retos de las comunidades migrantes y las herramientas institucionales disponibles.</p>,
       image: "/images/proyectos/migracion/Diagnóstico del contexto migratorio en Costa Rica.webp",
       button: "Consultar diagnóstico",
-      href: "",
+      href: "https://docs.google.com/document/d/e/2PACX-1vTDbEuh7DX00N9CApMxgEFL37--1xXKfLE4GE20Y1CcyinVuAk1RuLKmi0goRDlf8Urlv3lT0-FTXcv/pub",
     },
     {
       type: "reverse", // Cardinfrev

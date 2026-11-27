@@ -1,7 +1,13 @@
-"use client"
-
+import type { Metadata } from "next"
 import ImageGESO from "@/components/imageGESO"
 import Competencias from "@/components/nosotrosComponents/competencias";
+
+export const metadata: Metadata = {
+  title: "Competencias y capacidades",
+  description:
+    "Servicios de GESO: formulación y evaluación de proyectos, capacitación, asesoría especializada e investigación con perspectiva de género.",
+  alternates: { canonical: "/nosotros/competencias-y-capacidades" },
+}
 
 export default function competenciasPage() {
   return (

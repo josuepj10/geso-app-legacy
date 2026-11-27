@@ -1,4 +1,11 @@
+import type { Metadata } from "next"
 import Image from "next/image"
+
+// Página provisional: no se indexa hasta que tenga contenido.
+export const metadata: Metadata = {
+  title: "Eventos",
+  robots: { index: false, follow: true },
+}
 
 export default function eventosPage() {
   return (

@@ -5,6 +5,10 @@ import VolunteerIcon from "./lottieVolunteer";
 import HighFiveIcon from "./lottieHighFive";
 import PartnershipIcon from "./lottiePartnership";
 
+// Enlaces provisionales por correo hasta que GESO defina el método de donación
+// y los canales de voluntariado y alianzas.
+const CONTACTO = "mailto:info@generoysociedad.com";
+
 export default function Verticales() {
   return (
     <div className="flex flex-wrap lg:grid lg:grid-cols-3 justify-center gap-8 max-w-[1420px] mx-auto">
@@ -23,7 +27,7 @@ export default function Verticales() {
           </div>
         }
         button="Donar ahora"
-        href=""
+        href={`${CONTACTO}?subject=${encodeURIComponent("Donación")}`}
         media={(lottieRef) => <VolunteerIcon lottieRef={lottieRef} />}
         animationDelay={0}
       />
@@ -45,7 +49,7 @@ export default function Verticales() {
           </div>
         }
         button="Postúlate como voluntaria/o"
-        href=""
+        href={`${CONTACTO}?subject=${encodeURIComponent("Voluntariado")}`}
         media={(lottieRef) => <HighFiveIcon lottieRef={lottieRef} />}
         animationDelay={700}
       />
@@ -64,7 +68,7 @@ export default function Verticales() {
           </div>
         }
         button="Conversemos sobre alianzas"
-        href=""
+        href={`${CONTACTO}?subject=${encodeURIComponent("Alianza institucional")}`}
         media={(lottieRef) => <PartnershipIcon lottieRef={lottieRef} />}
         animationDelay={1400}
       />

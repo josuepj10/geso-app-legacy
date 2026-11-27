@@ -1,8 +1,14 @@
-"use client"
-
+import type { Metadata } from "next"
 import Cardinf from "@/components/proyectos/cardinf"
 import Cardinfrev from "@/components/proyectos/cardinfrev"
 
+
+export const metadata: Metadata = {
+  title: "Medios de comunicación y cultura",
+  description:
+    "Manuales para periodistas, la guía del COLPER y programas radiales como Gente sin Fronteras, con enfoque de derechos humanos.",
+  alternates: { canonical: "/proyectos/medios-de-comunicacion-y-cultura" },
+}
 
 export default function MediosPage() {
   const cards = [
@@ -23,7 +29,7 @@ export default function MediosPage() {
       sobre cobertura periodística con enfoque de derechos humanos en migración y refugio. Esta guía fortalece la práctica profesional de la comunicación en el país. </p>,
       image: "/images/proyectos/medios/Capitulo-en-la-Guia-de-Cobertura-Periodistica-del-COLPER.webp",
       button: "Ver guía completa",
-      href: "",
+      href: "https://colper.or.cr/wp-content/uploads/2024/09/Guia_cobertura_-periodistica_web.pdf",
     },
     {
       type: "normal", // Cardinf

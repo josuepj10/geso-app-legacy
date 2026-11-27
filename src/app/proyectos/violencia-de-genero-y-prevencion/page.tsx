@@ -1,7 +1,13 @@
-"use client"
-
+import type { Metadata } from "next"
 import Cardinf from "@/components/proyectos/cardinf"
 import Cardinfrev from "@/components/proyectos/cardinfrev"
+
+export const metadata: Metadata = {
+  title: "Violencia de género y prevención",
+  description:
+    "Proyectos de GESO con la UNGL, el INAMU, el BID y el PNUD para prevenir la violencia contra las mujeres en Costa Rica y América Latina.",
+  alternates: { canonical: "/proyectos/violencia-de-genero-y-prevencion" },
+}
 
 export default function ViolenciaPage() {
   const cards = [
@@ -43,7 +49,7 @@ export default function ViolenciaPage() {
       mejorar la atención de la violencia en América Latina.</p>,
       image: "/images/proyectos/violencia/Investigación regional sobre violencia doméstica.webp",
       button: "Descargar publicación BID",
-      href: "",
+      href: "https://publications.iadb.org/es/publicacion/14280/violencia-domestica-intervenciones-para-su-prevencion-y-tratamiento-3-planes",
     },
     {
       type: "normal", // Cardinf

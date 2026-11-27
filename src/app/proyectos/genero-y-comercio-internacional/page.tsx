@@ -1,8 +1,14 @@
-"use client"
-
+import type { Metadata } from "next"
 import { Reveal } from "@/components/reveal"
 
 
+
+export const metadata: Metadata = {
+  title: "Género y comercio internacional",
+  description:
+    "Investigación y foros de GESO sobre cómo los tratados y la política comercial afectan de forma diferenciada a mujeres y hombres en Centroamérica.",
+  alternates: { canonical: "/proyectos/genero-y-comercio-internacional" },
+}
 
 export default function GeneroComercioPage() {
   return (

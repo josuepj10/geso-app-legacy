@@ -1,8 +1,14 @@
-"use client";
-
+import type { Metadata } from "next"
 import Cardinf from "@/components/proyectos/cardinf"
 import Cardinfrev from "@/components/proyectos/cardinfrev"
 
+
+export const metadata: Metadata = {
+  title: "Democracia de género y participación ciudadana",
+  description:
+    "Proyectos de GESO con FUNDEMUCA, el SICA, el NDI y municipalidades de Costa Rica para promover la igualdad y la participación ciudadana.",
+  alternates: { canonical: "/proyectos/democracia-de-genero-y-participacion-ciudadana" },
+}
 
 export default function DemocraciaPage() { 
   const cards = [

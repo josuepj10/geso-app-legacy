@@ -1,12 +1,18 @@
+import type { Metadata } from "next"
 import Image from "next/image"
+
+// Página provisional: no se indexa hasta que GESO entregue los términos.
+export const metadata: Metadata = {
+  title: "Términos",
+  robots: { index: false, follow: true },
+}
 
 export default function terminosPage() {
   return (
     <div>
-      
-      <div className="flex justify-center my-20">
-              <Image src="/images/development.png" alt="Construyendo" width={1000} height={1000} priority />
-            </div>
+      <div className="flex justify-center mt-20 mb-42">
+        <Image src="/images/eventosimage.webp" alt="Página en construcción" width={750} height={500} priority />
+      </div>
     </div>
   );
 }

@@ -1,6 +1,11 @@
-"use client"
-
+import type { Metadata } from "next"
 import { Reveal } from "@/components/reveal"
+
+// Página provisional: no se indexa hasta que tenga contenido.
+export const metadata: Metadata = {
+  title: "GESO en medios",
+  robots: { index: false, follow: true },
+}
 
 export default function actualidadPage() {
   return (
