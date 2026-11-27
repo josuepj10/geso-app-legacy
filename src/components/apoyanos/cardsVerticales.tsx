@@ -1,9 +1,14 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import CardIcons from "./cardVertical";
-import VolunteerIcon from "./lottieVolunteer";
-import HighFiveIcon from "./lottieHighFive";
-import PartnershipIcon from "./lottiePartnership";
+
+// Las animaciones Lottie (librería + datos) se cargan después de mostrar la página,
+// con un espacio cuadrado reservado para que el diseño no salte.
+const Placeholder = () => <div aria-hidden="true" className="w-full max-w-80 aspect-square" />;
+const VolunteerIcon = dynamic(() => import("./lottieVolunteer"), { ssr: false, loading: Placeholder });
+const HighFiveIcon = dynamic(() => import("./lottieHighFive"), { ssr: false, loading: Placeholder });
+const PartnershipIcon = dynamic(() => import("./lottiePartnership"), { ssr: false, loading: Placeholder });
 
 // Enlaces provisionales por correo hasta que GESO defina el método de donación
 // y los canales de voluntariado y alianzas.
@@ -28,7 +33,7 @@ export default function Verticales() {
         }
         button="Donar ahora"
         href={`${CONTACTO}?subject=${encodeURIComponent("Donación")}`}
-        media={(lottieRef) => <VolunteerIcon lottieRef={lottieRef} />}
+        media={(lottieRef, onReady) => <VolunteerIcon lottieRef={lottieRef} onReady={onReady} />}
         animationDelay={0}
       />
 
@@ -50,7 +55,7 @@ export default function Verticales() {
         }
         button="Postúlate como voluntaria/o"
         href={`${CONTACTO}?subject=${encodeURIComponent("Voluntariado")}`}
-        media={(lottieRef) => <HighFiveIcon lottieRef={lottieRef} />}
+        media={(lottieRef, onReady) => <HighFiveIcon lottieRef={lottieRef} onReady={onReady} />}
         animationDelay={700}
       />
 
@@ -69,7 +74,7 @@ export default function Verticales() {
         }
         button="Conversemos sobre alianzas"
         href={`${CONTACTO}?subject=${encodeURIComponent("Alianza institucional")}`}
-        media={(lottieRef) => <PartnershipIcon lottieRef={lottieRef} />}
+        media={(lottieRef, onReady) => <PartnershipIcon lottieRef={lottieRef} onReady={onReady} />}
         animationDelay={1400}
       />
     </div>

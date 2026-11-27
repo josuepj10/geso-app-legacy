@@ -28,6 +28,18 @@ export function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside)
   }, [])
 
+  // Escape cierra el submenú y devuelve el foco a su botón
+  useEffect(() => {
+    if (!openDropdown) return
+    function handleEscape(event: KeyboardEvent) {
+      if (event.key !== "Escape") return
+      setOpenDropdown(null)
+      dropdownRef.current?.querySelector<HTMLButtonElement>("button")?.focus()
+    }
+    document.addEventListener("keydown", handleEscape)
+    return () => document.removeEventListener("keydown", handleEscape)
+  }, [openDropdown])
+
   return (
     <header className="w-full max-w-[1362px]">
       <div className="mx-auto flex justify-between items-center py-2 px-4 lg:px-0">
@@ -35,7 +47,7 @@ export function Navbar() {
         <Link href="/" className="py-2 pl-4 md:pl-0">
           <Image
             src="/images/logo.png"
-            alt="Logo Fundación"
+            alt="Fundación GESO, ir al inicio"
             width={40}
             height={40}
             priority
@@ -43,19 +55,33 @@ export function Navbar() {
         </Link>
 
         {/* Menú Desktop */}
-        <nav className="hidden md:flex md:gap-8">
+        <nav aria-label="Menú principal" className="hidden md:flex md:gap-8">
           {menuItems.map((item) => {
             const isChildActive = item.children?.some(
               (child) => pathname === child.href
             )
            // const isActive = pathname === item.href || isChildActive
             const isOpen = openDropdown === item.href
+            const submenuId = `submenu${item.href.replace(/\//g, "-")}`
 
             // retorna el bloque dropdown
             if (item.children) {
               return (
-                <div key={item.href} className="relative group" ref={dropdownRef}>
+                <div
+                  key={item.href}
+                  className="relative group"
+                  ref={dropdownRef}
+                  // Cierra el submenú cuando el foco sale de él (por ejemplo, con Tab)
+                  onBlur={(event) => {
+                    if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+                      setOpenDropdown(null)
+                    }
+                  }}
+                >
                   <button
+                    type="button"
+                    aria-expanded={isOpen}
+                    aria-controls={submenuId}
                     onClick={() => setOpenDropdown(isOpen ? null : item.href)}
                     className={`xl:px-5 px-2 py-1.5 xl:gap-3 flex items-center rounded-3xl font-medium transition-colors cursor-pointer box-border
                       ${
@@ -69,12 +95,14 @@ export function Navbar() {
                     {item.label}
                     {isOpen ? (
                       <ChevronUp
+                        aria-hidden="true"
                         className={`w-5 h-5 ${
                           isChildActive ? "text-white" : "text-[#374151]"
                         }`}
                       />
                     ) : (
                       <ChevronDown
+                        aria-hidden="true"
                         className={`w-5 h-5 ${
                           isChildActive
                             ? "text-white"
@@ -88,6 +116,7 @@ export function Navbar() {
                   <AnimatePresence>
                     {isOpen && (
                       <motion.div
+                        id={submenuId}
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
@@ -101,6 +130,7 @@ export function Navbar() {
                             <Link
                               key={child.href}
                               href={child.href}
+                              aria-current={isChildActive ? "page" : undefined}
                               className={`block w-[170px] py-2 text-lg pl-6 rounded-3xl transition-colors ${
                                 isChildActive
                                   ? "bg-[#5B1780] text-white font-semibold"

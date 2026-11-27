@@ -117,7 +117,7 @@ export default function RecursosPage() {
   
   return (
     <section>      
-        <main className="leading-relaxed text-[#374151] text-center text-lg my-3 mx-auto max-w-[1050px]">
+        <div className="leading-relaxed text-[#374151] text-center text-lg my-3 mx-auto max-w-[1050px]">
 
           <h1 className=" flex justify-center pb-2 text-[32px] md:text-[44px] text-[#5B1780] font-bold ">
             Publicaciones y recursos
@@ -132,7 +132,7 @@ export default function RecursosPage() {
               internacionales. 
             </p>
           </Reveal>
-        </main>
+        </div>
       
       <div className="grid grid-cols-1 items-center justify-center max-w-fit mx-auto
                       xl:grid-cols-2 gap-8 my-8 ">

@@ -1,5 +1,3 @@
-"use client"
-
 import Image from "next/image"
 import Link from "next/link"
 
@@ -32,7 +30,7 @@ export default function Cardinf({ title, text, image, button, href, imageClass }
         >         
           <Image
             src={image}
-            alt={title}
+            alt=""
             width={616}
             height={517}
             className={`w-full h-full max-h-[547] lg:min-h-[547px] rounded-[34px] object-cover ${imageClass || ""}`}

@@ -1,5 +1,3 @@
-"use client"
-
 import Image from "next/image"
 import Link from "next/link"
 
@@ -25,7 +23,7 @@ export default function CardPublicaciones({ title, text, image, button, href, im
       <div className="flex flex-col justify-center items-center sm:pt-8 sm:px-8 pt-4 px-4">
         <Image
           src={image}
-          alt={title}
+          alt=""
           width={586}
           height={299}
           className={`w-[586px] h-[299px] rounded-[34px] object-cover ${imageClass || ""}`}

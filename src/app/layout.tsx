@@ -1,9 +1,14 @@
 import "./globals.css"
 import type { Metadata } from "next"
+import { Inter } from "next/font/google"
 import Footer from "@/components/footer"
 import BarHeader from "@/components/menu/barheader"
 import MovilMenu from "@/components/menu/movilMenu"
+import { MotionProvider } from "@/components/motion-provider"
 import * as React from "react"
+
+// Fuente servida desde el propio sitio (sin solicitud a Google Fonts).
+const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-inter" })
 
 const SITE_URL = "https://www.fundaciongeso.com"
 
@@ -53,7 +58,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="es" suppressHydrationWarning>
+    <html lang="es" className={inter.variable} suppressHydrationWarning>
       <body
         className="antialiased text-base bg-white text-gray-900 overflow-x-hidden"
         suppressHydrationWarning
@@ -65,23 +70,36 @@ export default function RootLayout({
           }}
         />
 
-        {/* Navbar fijo */}
-        <BarHeader />
+        {/* Enlace para saltar el menú con el teclado; solo se ve al recibir foco */}
+        <a
+          href="#contenido"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100]
+                     focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:text-[#5B1780]
+                     focus:font-semibold focus:shadow-lg"
+        >
+          Saltar al contenido
+        </a>
 
-        {/* Menú móvil */}
-        <div className="lg:hidden">
-          <MovilMenu />
-        </div>
+        {/* Las animaciones se reducen si el sistema lo pide */}
+        <MotionProvider>
+          {/* Navbar fijo */}
+          <BarHeader />
 
-        {/* Contenido principal */}
-        <main className="pt-18 lg:pt-32">
-          <div className="max-w-[1362px] mx-auto md:px-6 2xl:px-0 px-4">
-            {children}
+          {/* Menú móvil */}
+          <div className="lg:hidden">
+            <MovilMenu />
           </div>
-        </main>
 
-        {/* Footer */}
-        <Footer />
+          {/* Contenido principal */}
+          <main id="contenido" tabIndex={-1} className="pt-18 lg:pt-32 focus:outline-none">
+            <div className="max-w-[1362px] mx-auto md:px-6 2xl:px-0 px-4">
+              {children}
+            </div>
+          </main>
+
+          {/* Footer */}
+          <Footer />
+        </MotionProvider>
       </body>
     </html>
   )

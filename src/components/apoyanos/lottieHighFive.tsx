@@ -6,12 +6,14 @@ import HighFiveAnimation from "@/lottie/HighFive.json";
 
 interface HighFiveIconProps {
   lottieRef: RefObject<LottieRefCurrentProps | null>;
+  onReady?: () => void;
 }
 
-export default function HighFiveIcon({ lottieRef }: HighFiveIconProps) {
+export default function HighFiveIcon({ lottieRef, onReady }: HighFiveIconProps) {
   return (
     <Lottie
       lottieRef={lottieRef}
+      onDOMLoaded={onReady}
       animationData={HighFiveAnimation}
       loop={false}
       autoplay={false}

@@ -1,5 +1,3 @@
-"use client"
-
 import Image from "next/image";
 
 
@@ -26,7 +24,7 @@ export default function Competencias() {
                                 src="/images/competencias/libro_engranaje.svg"
                                 width={55}
                                 height={55}
-                                alt="Ícono aprendizaje con libro"
+                                alt=""
                             />
                         </div>                    
                     </div>
@@ -51,14 +49,14 @@ export default function Competencias() {
                                 src="/images/competencias/pizarra.svg"
                                 width={55}
                                 height={55}
-                                alt="Ícono aprendizaje en pizarra"
+                                alt=""
                             />
 
                             <Image
                                 src="/images/competencias/pizarra_blanca.svg"
                                 width={52}
                                 height={53}
-                                alt="Hover ícono en blanco"
+                                alt=""
                                 className="absolute inset-0 m-auto opacity-0 group-hover:opacity-100 transition duration-300"
                             />
                         </div>                    
@@ -84,7 +82,7 @@ export default function Competencias() {
                                 src="/images/competencias/sombrero.svg"
                                 width={66}
                                 height={66}
-                                alt="Ícono título obtenido"
+                                alt=""
                             />
                         </div>                    
                     </div>
@@ -109,14 +107,14 @@ export default function Competencias() {
                                 src="/images/competencias/audifonos.svg"
                                 width={55}
                                 height={55}
-                                alt="Ícono aprendizaje con herramientas tecnológicas "
+                                alt=""
                             />
 
                             <Image
                                 src="/images/competencias/audifonos_blanco.svg"
                                 width={53}
                                 height={53}
-                                alt="Ícono hover aprendizaje con herramientas tecnológicas"
+                                alt=""
                                 className="absolute inset-0 m-auto opacity-0 group-hover:opacity-100 transition duration-300"
                             />
                         </div>                    
@@ -142,7 +140,7 @@ export default function Competencias() {
                                 src="/images/competencias/buscador.svg"
                                 width={64}
                                 height={59}
-                                alt="Ícono investigación"
+                                alt=""
                             />
                         </div>                    
                     </div>

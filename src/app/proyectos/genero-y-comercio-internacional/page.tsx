@@ -44,7 +44,8 @@ export default function GeneroComercioPage() {
           <iframe
             className="w-full h-full"
             src="https://www.youtube.com/embed/0rjmUrA1wsY?si=_ASiHlzVBsbwLpqg"
-            title="Video de YouTube"
+            title="Foro Desafíos de género para el comercio exterior de Costa Rica"
+            loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
           ></iframe>
