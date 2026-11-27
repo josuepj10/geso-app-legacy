@@ -36,23 +36,23 @@ export default function ImageButton({
         <article
             className="
             mx-auto w-full max-w-[1014px]
-            bg-white rounded-[50px] border border-[#D1D5DB]
+            bg-white rounded-[50px] border border-geso-line
             shadow-lg p-11 lg:p-13 flex flex-col
             "
         >
-          <h2 className="text-2xl lg:text-[40px] font-semibold text-[#5B1780] mb-4">
+          <h2 className="text-2xl lg:text-[40px] font-semibold text-geso-purple mb-4">
           {title}
           </h2>
 
-          <p className="text-[#374151] text-lg mb-4">
+          <p className="text-geso-ink text-lg mb-4">
           {description}
           </p>
 
           <Link
           href={buttonHref}
           className="
-              self-start mt-2 w-full sm:w-[180px] py-3 text-lg bg-[#5B1780] 
-              text-white hover:text-[#5B1780] rounded-full hover:bg-[#FFD11A] 
+              self-start mt-2 w-full sm:w-[180px] py-3 text-lg bg-geso-purple 
+              text-white hover:text-geso-purple rounded-full hover:bg-geso-yellow 
               inline-block text-center transition-colors duration-300 ease-in-out
           "
           >

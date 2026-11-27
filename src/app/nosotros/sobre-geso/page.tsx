@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/nosotros/sobre-geso" },
 }
 
-export default function misionPage() {
+export default function SobreGesoPage() {
   return (
     <>
       <ImageGESO 
@@ -25,7 +25,7 @@ export default function misionPage() {
       
       <div>
         <Vision
-          imageSrc="/images/sobre-geso/vision_2.webp"
+          imageSrc="/images/sobre-geso/vision-2.webp"
           title="Visión"
           description="Ser una entidad reconocida a nivel nacional e internacional por la calidad de los proyectos sociales y culturales 
           que desarrolla, así como por el rigor con que incorpora la perspectiva de equidad de género, tanto en el plano conceptual como 
@@ -34,7 +34,7 @@ export default function misionPage() {
       </div>
 
       <div className="flex justify-center md:my-20 my-10 ">
-          <h2 className="md:text-4xl text-2xl font-bold text-[#5B1780]">Historia</h2>
+          <h2 className="md:text-4xl text-2xl font-bold text-geso-purple">Historia</h2>
       </div>
 
       <Historia />

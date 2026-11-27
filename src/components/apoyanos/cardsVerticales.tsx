@@ -33,7 +33,7 @@ export default function Verticales() {
         }
         button="Donar ahora"
         href={`${CONTACTO}?subject=${encodeURIComponent("Donación")}`}
-        media={(lottieRef, onReady) => <VolunteerIcon lottieRef={lottieRef} onReady={onReady} />}
+        animation={VolunteerIcon}
         animationDelay={0}
       />
 
@@ -55,7 +55,7 @@ export default function Verticales() {
         }
         button="Postúlate como voluntaria/o"
         href={`${CONTACTO}?subject=${encodeURIComponent("Voluntariado")}`}
-        media={(lottieRef, onReady) => <HighFiveIcon lottieRef={lottieRef} onReady={onReady} />}
+        animation={HighFiveIcon}
         animationDelay={700}
       />
 
@@ -74,7 +74,7 @@ export default function Verticales() {
         }
         button="Conversemos sobre alianzas"
         href={`${CONTACTO}?subject=${encodeURIComponent("Alianza institucional")}`}
-        media={(lottieRef, onReady) => <PartnershipIcon lottieRef={lottieRef} onReady={onReady} />}
+        animation={PartnershipIcon}
         animationDelay={1400}
       />
     </div>

@@ -1,25 +1,21 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/*
+ * Colores de marca de GESO. Generan utilidades como bg-geso-purple,
+ * text-geso-ink o border-geso-line, y variables CSS (var(--color-geso-purple)).
+ * Para cambiar un color de marca en todo el sitio, se cambia solo aquí.
+ */
+@theme {
+  --color-geso-purple: #5B1780;
+  --color-geso-yellow: #FFD11A;
+  --color-geso-ink: #374151;
+  --color-geso-line: #D1D5DB;
+}
 
 .footer-links a {
   display: inline-block;
   width: fit-content;
-}
-
-@keyframes pulsoTexto {
-  0% {
-    opacity: 1;
-  }
-  15% {
-    opacity: 0.1;
-  }
-  30% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1; 
-  }
 }
 
 @keyframes marquee {
@@ -58,65 +54,6 @@
     animation: none;
   }
 }
-
-.nav-item {
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-.nav-item::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  left: 0;
-  bottom: -2px;
-  background-color: #4f46e5; /* color línea bajo los links */
-  transition: width 0.3s ease;
-}
-
-.nav-item:hover::after,
-.nav-item.active::after {
-  width: 100%;
-}
-
-.bg-purplePrimary {
-  background-color: #5B1780;
-}
-
-.text-purplePrimary {
-  color: #5B1780;
-}
-
-.border-purplePrimary {
-  border-color: #5B1780;
-}
-
-.bg-purpleHover {
-  background-color: #8C339D;
-}
-
-.text-purpleHover {
-  color: #8C339D;
-}
-
-.border-purpleHover {
-  border-color: #8C339D;
-}
-
-.bg-yellowtertiary {
-  background-color: #FFD11A;
-}
-
-.text-yellowtertiary {
-  color: #FFD11A;
-}
-
-.border-yellowtertiary {
-  border-color: #FFD11A;
-}
-
-
 
 @custom-variant dark (&:is(.dark *));
 

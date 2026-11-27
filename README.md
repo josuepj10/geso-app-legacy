@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sitio web de la Fundación GESO
 
-## Getting Started
+Código del sitio [www.fundaciongeso.com](https://www.fundaciongeso.com), de la Fundación Género y Sociedad (GESO), Costa Rica.
 
-First, run the development server:
+Es un sitio estático hecho con Next.js. Todo el contenido (textos, proyectos, publicaciones, enlaces) está escrito en el código, así que cualquier cambio de contenido requiere editar un archivo y publicar. Está previsto conectarlo a Sanity para que GESO edite el contenido desde un panel.
+
+## Tecnología
+
+| Pieza | Versión o servicio |
+| --- | --- |
+| Framework | Next.js 16 (App Router), React 19, TypeScript |
+| Estilos | Tailwind CSS 4, componentes de shadcn/ui (`button`, `sheet`) |
+| Animaciones | framer-motion, Swiper (carrusel), Lottie (Apóyanos) |
+| Hosting | Vercel, con despliegue automático desde `main` |
+| Dominio y DNS | Cloudflare |
+| Gestor de paquetes | pnpm |
+
+## Requisitos
+
+- Node.js 22.12 o superior
+- pnpm
+
+## Comandos
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install      # instalar dependencias
+pnpm dev          # servidor de desarrollo en http://localhost:3000
+pnpm build        # compilación de producción
+pnpm start        # servir la compilación de producción
+pnpm lint         # revisar el código con ESLint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Antes de abrir un pull request, `pnpm lint` y `pnpm build` deben terminar sin errores.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Cómo se publica
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Cada push a `main` se publica automáticamente en www.fundaciongeso.com.
+- Cada pull request genera una vista previa en Vercel, con su enlace en el propio PR. Revisarla en móvil y escritorio antes de fusionar.
+- No se trabaja directo sobre `main`: cada cambio va en su rama y entra por pull request.
 
-## Learn More
+## Estructura
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+  app/                    Páginas (una carpeta por ruta), layout, estilos globales,
+                          metadata, robots.ts, sitemap.ts y not-found.tsx
+  components/
+    menu/                 Menú de escritorio, menú móvil y lista de enlaces (menuItems.ts)
+    landing/              Carrusel, noticias y bloque "Colabora" del inicio
+    proyectos/            Tarjetas de áreas (cards.tsx) y de proyectos (ProjectCard, ProjectList)
+    publicaciones/        Tarjeta de publicación
+    nosotrosComponents/   Secciones de Misión, Visión, Historia, Principios, Competencias, Alianzas
+    apoyanos/             Tarjetas de Apóyanos y sus animaciones Lottie
+    ui/                   Componentes base de shadcn/ui
+  lib/utils.ts            Función cn() para combinar clases de Tailwind
+  lottie/                 Datos de las animaciones
+public/images/            Imágenes del sitio, agrupadas por sección
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Cómo cambiar el contenido hoy
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Quiero cambiar… | Archivo |
+| --- | --- |
+| Textos y enlaces del menú | `src/components/menu/menuItems.ts` |
+| Carrusel del inicio | `src/components/landing/slider.tsx` |
+| Noticias del inicio | `src/app/page.tsx` |
+| Proyectos de un área | El arreglo `cards` de `src/app/proyectos/<área>/page.tsx` |
+| Publicaciones | El arreglo `cards` de `src/app/publicaciones-y-recursos/page.tsx` |
+| Botones de Apóyanos | `src/components/apoyanos/cardsVerticales.tsx` |
+| Contacto y redes del footer | `src/components/footer.tsx` |
+| Título y descripción de una página (SEO) | El `export const metadata` de su `page.tsx` |
+| Páginas del sitemap | `src/app/sitemap.ts` |
 
-## Deploy on Vercel
+Las tarjetas de proyecto alternan solas la imagen a izquierda y derecha. Una tarjeta solo muestra su botón si tiene texto (`button`) y enlace (`href`).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Convenciones
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Colores de marca:** usar los tokens definidos en `src/app/globals.css` (`geso-purple`, `geso-yellow`, `geso-ink`, `geso-line`), por ejemplo `bg-geso-purple` o `text-geso-ink`. No escribir colores hexadecimales en los componentes.
+- **Imágenes:** nombres en minúsculas, con guiones y sin tildes, espacios ni paréntesis (`gestion-municipal-y-equidad-de-genero.webp`). Formato `.webp`.
+- **Texto alternativo:** describir las imágenes con información propia; usar `alt=""` en íconos decorativos y en fotos que solo repiten el título de su tarjeta.
+- **Componentes de cliente:** agregar `"use client"` solo cuando el componente usa estado, efectos o eventos.
+- **Un solo `h1` y un solo `<main>` por página:** el `<main>` ya está en el layout.
+
+## Cuentas
+
+| Servicio | Uso | Administra |
+| --- | --- | --- |
+| GitHub | Repositorio | Por confirmar |
+| Vercel | Hosting y vistas previas | Por confirmar |
+| Cloudflare | Dominio `fundaciongeso.com` (vence cada 28 de diciembre) y DNS | Por confirmar |
+| Google Search Console | Indexación y sitemap | Por configurar |
+
+Lo recomendable es que todas las cuentas estén a nombre de GESO, con un correo institucional.

@@ -32,16 +32,16 @@ export default function Vision({
                 <div
                     className="
                     mx-auto w-full max-w-[724px]
-                    bg-white rounded-[50px] border border-[#D1D5DB]
+                    bg-white rounded-[50px] border border-geso-line
                     shadow-lg p-9 lg:px-13 lg:py-9 flex flex-col
                     "
                 >
                     <h2 id="vision-heading" 
-                    className="text-2xl text-center lg:text-[40px] font-semibold text-[#5B1780] mb-4">
+                    className="text-2xl text-center lg:text-[40px] font-semibold text-geso-purple mb-4">
                         {title}
                     </h2>
 
-                    <p className="text-[#374151] text-center text-lg mb-4">
+                    <p className="text-geso-ink text-center text-lg mb-4">
                         {description}
                     </p>
 

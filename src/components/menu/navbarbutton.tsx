@@ -25,10 +25,10 @@ export default function NavbarButton({ href, special, children }: NavbarButtonPr
       className={`xl:px-5 px-3 py-1.5 rounded-[30px] font-medium transition-colors
         ${
           special
-            ? "bg-[#FFD11A] text-[#5B1780]"
+            ? "bg-geso-yellow text-geso-purple"
             : isActive
-              ? "bg-[#5B1780] text-white"
-              : "text-[#374151] hover:text-[#5B1780]"
+              ? "bg-geso-purple text-white"
+              : "text-geso-ink hover:text-geso-purple"
         }`}
     >
       {children}

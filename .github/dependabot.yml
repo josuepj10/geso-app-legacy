@@ -1,0 +1,15 @@
+# Actualizaciones automáticas de dependencias.
+# Dependabot abre un pull request al mes; cada uno debe pasar la vista previa de Vercel antes de fusionarse.
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 5
+    groups:
+      # Versiones menores y parches juntos en un solo PR, para no llenar el repositorio de PRs.
+      menores-y-parches:
+        update-types:
+          - "minor"
+          - "patch"

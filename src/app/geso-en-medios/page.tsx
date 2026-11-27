@@ -7,14 +7,14 @@ export const metadata: Metadata = {
   robots: { index: false, follow: true },
 }
 
-export default function actualidadPage() {
+export default function GesoEnMediosPage() {
   return (
     
       
-    <div className="leading-relaxed text-[#374151] text-lg md:my-20 lg:mb-55 my-10">
+    <div className="leading-relaxed text-geso-ink text-lg md:my-20 lg:mb-55 my-10">
 
       <Reveal>
-        <p className="text-[#374151] leading-relaxed text-lg">
+        <p className="text-geso-ink leading-relaxed text-lg">
           Artículos, entrevistas, podcasts, trabajo en medios.
         </p>
       </Reveal>

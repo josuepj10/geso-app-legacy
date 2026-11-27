@@ -2,7 +2,7 @@
 .swiper-pagination-bullet {
   background-color: white !important; /* color base */
   opacity: 1;
-  border: 1px solid #5B1780; /* borde morado */
+  border: 1px solid var(--color-geso-purple); /* borde morado */
   width: 11px;
   height: 11px;
   transition: all 0.3s ease;
@@ -10,7 +10,7 @@
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #5B1780 !important; /* color activo */
+  background-color: var(--color-geso-purple) !important; /* color activo */
   opacity: 1;
   transform: scale(1);
 }

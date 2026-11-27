@@ -10,20 +10,19 @@ export const metadata: Metadata = {
   alternates: { canonical: "/nosotros/principios" },
 }
 
-export default function principiosPage() {
+export default function PrincipiosPage() {
   return (
     <>
 
       <ImageGESO 
         imageSrc="/images/principios/lectura.webp" 
         title="Nuestros principios"
-        imageClassName="#"
       />
 
       <article className="md:my-25 my-10 text-center">
-        <h2 className="md:text-3xl text-2xl font-bold text-[#5B1780]">Nuestro trabajo se inspira en la Democracia de Género</h2>
+        <h2 className="md:text-3xl text-2xl font-bold text-geso-purple">Nuestro trabajo se inspira en la Democracia de Género</h2>
         <Reveal>
-          <p className="leading-relaxed text-[#374151] text-lg my-8 mx-auto max-w-[1060px]">
+          <p className="leading-relaxed text-geso-ink text-lg my-8 mx-auto max-w-[1060px]">
               Una propuesta normativa y estratégica que impulsa ciudadanía desde la igualdad, 
               la justicia social y la corresponsabilidad. Este enfoque atraviesa nuestros proyectos, transformando prácticas sociales, culturales 
               y políticas, y partiendo de la convicción de que la igualdad sustantiva es esencial para un desarrollo democrático y sostenible.

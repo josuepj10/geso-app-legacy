@@ -1,10 +1,10 @@
 import Image from "next/image";
 
 const icons = [
-  { src: "/images/iconos-marquee/REDNAM.webp", alt: "REDNAM, Red Nacional de Organizaciones Civiles para las Migraciones" },
+  { src: "/images/iconos-marquee/rednam.webp", alt: "REDNAM, Red Nacional de Organizaciones Civiles para las Migraciones" },
   { src: "/images/iconos-marquee/redcepaz.webp", alt: "Red CEPAZ" },
-  { src: "/images/iconos-marquee/FORO.webp", alt: "Foro Permanente sobre Población Migrante y Refugiada" },
-  { src: "/images/iconos-marquee/CANAESS.webp", alt: "CANAESS, Cámara Nacional de la Economía Social Solidaria" },
+  { src: "/images/iconos-marquee/foro.webp", alt: "Foro Permanente sobre Población Migrante y Refugiada" },
+  { src: "/images/iconos-marquee/canaess.webp", alt: "CANAESS, Cámara Nacional de la Economía Social Solidaria" },
 ];
 
 // Cada copia repite los 4 logos 3 veces (12 × 160 px = 1920 px) para cubrir

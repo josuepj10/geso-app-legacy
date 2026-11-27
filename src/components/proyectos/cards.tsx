@@ -12,7 +12,7 @@ export default function Card({ title, image, href }: CardProps) {
     <article>
       <Link
         href={href}
-        className="block rounded-[17%] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#5B1780]"
+        className="block rounded-[17%] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-geso-purple"
       >
         {/* El leve aumento al pasar el mouse es CSS; se desactiva si el sistema pide reducir movimiento. */}
         <div
@@ -32,7 +32,7 @@ export default function Card({ title, image, href }: CardProps) {
           </div>
 
           {/* Título (parte inferior = 1/3 del contenedor) */}
-          <div className="flex text-center items-center justify-center text-[#374151] h-3/7 p-4">
+          <div className="flex text-center items-center justify-center text-geso-ink h-3/7 p-4">
             <h2 className="text-xl font-semibold">{title}</h2>
           </div>
         </div>

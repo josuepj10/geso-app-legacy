@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#5B1780] text-white" >
+    <footer className="w-full bg-geso-purple text-white" >
       
       
       <div className="w-full max-w-[1420px] mx-auto px-6 lg:py-16 py-8">
@@ -81,13 +81,13 @@ export default function Footer() {
           <div className="flex flex-col gap-5">
             <span className="font-semibold text-xl text-white">Redes</span>
             <div className="flex gap-4 space-x-6 ">
-              <Link href="https://www.facebook.com/FundacionGESO#" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Fundación GESO" className="hover:text-[#FFD11A]">
+              <Link href="https://www.facebook.com/FundacionGESO#" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Fundación GESO" className="hover:text-geso-yellow">
                 <FaFacebookF size={30} />
               </Link>
-              <Link href="https://www.instagram.com/fundaciongeso/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Fundación GESO" className="hover:text-[#FFD11A]">
+              <Link href="https://www.instagram.com/fundaciongeso/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Fundación GESO" className="hover:text-geso-yellow">
                 <FaInstagram size={30} />
               </Link>
-              <Link href="https://www.youtube.com/channel/UCGghK4Q0ZFTG6lOay5qO1BQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube de Fundación GESO" className="hover:text-[#FFD11A]">
+              <Link href="https://www.youtube.com/channel/UCGghK4Q0ZFTG6lOay5qO1BQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube de Fundación GESO" className="hover:text-geso-yellow">
                 <FaYoutube size={30} />
               </Link>
             </div>
@@ -105,7 +105,7 @@ export default function Footer() {
           <div className="flex flex-col gap-5 lg:items-end">
             
             {/* asChild: el enlace toma el estilo de botón, sin anidar un botón dentro de un enlace */}
-            <Button asChild className="w-fit bg-[#FFD11A] text-[#5B1780] rounded-3xl text-lg px-8 py-6 cursor-pointer hover:bg-[#FFD11A]">
+            <Button asChild className="w-fit bg-geso-yellow text-geso-purple rounded-3xl text-lg px-8 py-6 cursor-pointer hover:bg-geso-yellow">
               <Link href="/apoyanos">Colabora con nosotros</Link>
             </Button>
             

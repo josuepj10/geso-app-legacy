@@ -29,7 +29,7 @@ const slides = [
     button: null,
   },
   {
-    image: "/images/inicio/abajo_inicio.webp",
+    image: "/images/inicio/abajo-inicio.webp",
     alt: "Cuatro personas sonrientes abrazadas en círculo, vistas desde abajo",
     title: (
       <>
@@ -53,26 +53,21 @@ const slides = [
 
 export default function Slider() {
   const [swiper, setSwiper] = useState<SwiperInstance | null>(null)
-  const [paused, setPaused] = useState(false)
+  // null = la persona no ha usado el botón; entonces manda la preferencia del sistema.
+  const [pausaManual, setPausaManual] = useState<boolean | null>(null)
   const reducirMovimiento = useReducedMotion()
 
-  // Si el sistema pide reducir movimiento, el carrusel no avanza solo.
-  useEffect(() => {
-    if (reducirMovimiento && swiper) {
-      swiper.autoplay.stop()
-      setPaused(true)
-    }
-  }, [reducirMovimiento, swiper])
+  // Si el sistema pide reducir movimiento, el carrusel empieza pausado.
+  const paused = pausaManual ?? Boolean(reducirMovimiento)
 
-  const togglePausa = () => {
+  // Sincroniza el avance automático de Swiper con el estado de pausa.
+  useEffect(() => {
     if (!swiper) return
-    if (paused) {
-      swiper.autoplay.start()
-    } else {
-      swiper.autoplay.stop()
-    }
-    setPaused(!paused)
-  }
+    if (paused) swiper.autoplay.stop()
+    else swiper.autoplay.start()
+  }, [paused, swiper])
+
+  const togglePausa = () => setPausaManual(!paused)
 
   return (
     <section
@@ -116,7 +111,7 @@ export default function Slider() {
                 priority={index === 0}
                 loading={index === 0 ? "eager" : "lazy"}
               />
-              <div className="absolute inset-0 bg-[#5B1780]/60" />
+              <div className="absolute inset-0 bg-geso-purple/60" />
 
               {/* Card sobre la imagen */}
               <div
@@ -142,7 +137,7 @@ export default function Slider() {
                 {slide.button && (
                   <Link
                     href={slide.button.href}
-                    className="self-start mt-4 sm:mt-5 px-2 w-full sm:w-[180px] py-4 text-lg bg-[#FFD11A] text-[#5B1780]
+                    className="self-start mt-4 sm:mt-5 px-2 w-full sm:w-[180px] py-4 text-lg bg-geso-yellow text-geso-purple
                               rounded-4xl inline-block text-center font-semibold "
                   >
                     {slide.button.label}
@@ -161,8 +156,8 @@ export default function Slider() {
         onClick={togglePausa}
         aria-label={paused ? "Reanudar carrusel" : "Pausar carrusel"}
         className="absolute bottom-4 right-5 z-10 flex h-10 w-10 items-center justify-center rounded-full
-                   bg-white text-[#5B1780] shadow-md cursor-pointer
-                   hover:bg-[#FFD11A] transition-colors duration-300
+                   bg-white text-geso-purple shadow-md cursor-pointer
+                   hover:bg-geso-yellow transition-colors duration-300
                    focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
       >
         {paused ? <Play aria-hidden="true" className="h-5 w-5" /> : <Pause aria-hidden="true" className="h-5 w-5" />}

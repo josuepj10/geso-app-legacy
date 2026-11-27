@@ -13,10 +13,10 @@ export default function Home() {
     <>    
       <Slider />
 
-      {/* h2 text-2xl font-bold text-[#5B1780] */}
-      {/*h1 md:text-3xl text-2xl font-bold text-[#5B1780] */}
+      {/* h2 text-2xl font-bold text-geso-purple */}
+      {/*h1 md:text-3xl text-2xl font-bold text-geso-purple */}
         
-      <h2 className="mx-auto w-full p-6 text-center lg:mt-10 mt-6 md:text-[40px] text-2xl font-bold text-[#5B1780] ">
+      <h2 className="mx-auto w-full p-6 text-center lg:mt-10 mt-6 md:text-[40px] text-2xl font-bold text-geso-purple ">
         Noticias más recientes
       </h2>
 
@@ -66,7 +66,7 @@ export default function Home() {
       
       <div>
         <ImageButton
-          imageSrc="/images/inicio/imagen_colabora.webp"
+          imageSrc="/images/inicio/imagen-colabora.webp"
           title="Colabora con la Fundación GESO y ayúdanos a promover la equidad social."
           description="Cada aporte que usted realiza se transforma en oportunidades reales para quienes más lo necesitan. Sus donaciones permiten financiar programas de educación, inclusión y desarrollo comunitario que buscan reducir las brechas sociales en nuestro país."
           buttonText="Dona aquí"

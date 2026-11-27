@@ -6,7 +6,7 @@ import volunteerAnimation from "@/lottie/Volunteer.json";
 
 interface VolunteerIconProps {
   lottieRef: RefObject<LottieRefCurrentProps | null>;
-  onReady?: () => void;
+  onReady: () => void;
 }
 
 export default function VolunteerIcon({ lottieRef, onReady }: VolunteerIconProps) {

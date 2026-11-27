@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: true },
 }
 
-export default function terminosPage() {
+export default function TerminosPage() {
   return (
     <div>
       <div className="flex justify-center mt-20 mb-42">

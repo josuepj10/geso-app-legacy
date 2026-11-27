@@ -74,7 +74,7 @@ export default function RootLayout({
         <a
           href="#contenido"
           className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100]
-                     focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:text-[#5B1780]
+                     focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:text-geso-purple
                      focus:font-semibold focus:shadow-lg"
         >
           Saltar al contenido

@@ -86,10 +86,10 @@ export function Navbar() {
                     className={`xl:px-5 px-2 py-1.5 xl:gap-3 flex items-center rounded-3xl font-medium transition-colors cursor-pointer box-border
                       ${
                         isChildActive
-                          ? "bg-[#5B1780] text-white outline-none"
+                          ? "bg-geso-purple text-white outline-none"
                           : isOpen
-                          ? " text-[#374151] outline-1 outline-[#5B1780]"
-                          : "text-[#374151] hover:text-[#5B1780]"
+                          ? " text-geso-ink outline-1 outline-geso-purple"
+                          : "text-geso-ink hover:text-geso-purple"
                       }`}
                   >
                     {item.label}
@@ -97,7 +97,7 @@ export function Navbar() {
                       <ChevronUp
                         aria-hidden="true"
                         className={`w-5 h-5 ${
-                          isChildActive ? "text-white" : "text-[#374151]"
+                          isChildActive ? "text-white" : "text-geso-ink"
                         }`}
                       />
                     ) : (
@@ -106,7 +106,7 @@ export function Navbar() {
                         className={`w-5 h-5 ${
                           isChildActive
                             ? "text-white"
-                            : "text-[#374151] group-hover:text-[#5B1780]"
+                            : "text-geso-ink group-hover:text-geso-purple"
                         }`}
                       />
                     )}
@@ -121,7 +121,7 @@ export function Navbar() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: 0.25 }}
-                        className="absolute top-full left-0 bg-[#FFD11A] shadow-md rounded-2xl py-5 mt-2 gap-2 min-w-[210px] 
+                        className="absolute top-full left-0 bg-geso-yellow shadow-md rounded-2xl py-5 mt-2 gap-2 min-w-[210px] 
                                   z-20 flex flex-col items-center"
                       >
                         {item.children.map((child) => {
@@ -133,8 +133,8 @@ export function Navbar() {
                               aria-current={isChildActive ? "page" : undefined}
                               className={`block w-[170px] py-2 text-lg pl-6 rounded-3xl transition-colors ${
                                 isChildActive
-                                  ? "bg-[#5B1780] text-white font-semibold"
-                                  : "text-[#5B1780] hover:bg-white"
+                                  ? "bg-geso-purple text-white font-semibold"
+                                  : "text-geso-purple hover:bg-white"
                               }`}
                               onClick={() => setOpenDropdown(null)}
                             >

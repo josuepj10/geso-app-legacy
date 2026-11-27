@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 export default function Proyectos() {
   return (
     <div>
-      <h1 className="flex justify-center text-[#374151] md:text-3xl text-2xl font-bold my-6">
+      <h1 className="flex justify-center text-geso-ink md:text-3xl text-2xl font-bold my-6">
         <span>Proyectos</span>
-        <span className="text-[#5B1780]">&nbsp;GESO</span>
+        <span className="text-geso-purple">&nbsp;GESO</span>
       </h1>
       
       {/* cards */}
@@ -21,13 +21,13 @@ export default function Proyectos() {
       <div className="flex flex-wrap justify-center gap-8 my-10 max-w-[1200px] mx-auto px-8">
         <Card
           title="Democracia de género y participación ciudadana"
-          image="/images/proyectos/democracia de genero.webp"
+          image="/images/proyectos/democracia-de-genero.webp"
           href="/proyectos/democracia-de-genero-y-participacion-ciudadana"
         />
         
         <Card
           title="Violencia de género y prevención"
-          image="/images/proyectos/violencia de genero y prevencion.webp"
+          image="/images/proyectos/violencia-de-genero-y-prevencion.webp"
           href="/proyectos/violencia-de-genero-y-prevencion"
         />
         
@@ -39,7 +39,7 @@ export default function Proyectos() {
         
         <Card
           title="Medios de comunicación y cultura"
-          image="/images/proyectos/medios de comunicacion.webp"
+          image="/images/proyectos/medios-de-comunicacion.webp"
           href="/proyectos/medios-de-comunicacion-y-cultura"
         />
 
