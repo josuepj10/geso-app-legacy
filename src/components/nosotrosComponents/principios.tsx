@@ -1,5 +1,3 @@
-"use client"
-
 import Image from "next/image";
 
 export default function Principios() {
@@ -13,7 +11,7 @@ export default function Principios() {
             </h2>
 
             {/* Contenedor GRID de los 4 elementos */}
-            <main className="grid gap-6 
+            <div className="grid gap-6 
                             grid-cols-1 
                             md:grid-cols-2 
                             xl:grid-cols-[318px_1fr_318px]
@@ -30,7 +28,7 @@ export default function Principios() {
                             src="/images/principios/equidad.svg"
                             width={64} 
                             height={64} 
-                            alt="Libro engranaje" 
+                            alt="" 
                         />
                     </div>
                     <p className="text-center text-[#374151] px-13 mt-9">
@@ -48,7 +46,7 @@ export default function Principios() {
                             src="/images/principios/derechos.svg" 
                             width={64} 
                             height={64} 
-                            alt="Libro engranaje" 
+                            alt="" 
                         />
                     </div>
                     <p className="text-center text-[#374151] px-13 mt-9">
@@ -66,7 +64,7 @@ export default function Principios() {
                             src="/images/principios/innovacion.svg" 
                             width={64} 
                             height={64} 
-                            alt="Libro engranaje" 
+                            alt="" 
                         />
                     </div>
                     <p className="text-center text-[#374151] px-13 mt-9">
@@ -98,13 +96,13 @@ export default function Principios() {
                                 src="/images/principios/derechos.svg" 
                                 width={64} 
                                 height={64} 
-                                alt="Libro engranaje" 
+                                alt="" 
                             />
                             <Image
                                 src="/images/principios/derechosW.svg"
                                 width={64}
                                 height={64}
-                                alt="pizarra"
+                                alt=""
                                 className="absolute inset-0 m-auto opacity-0 group-hover:opacity-100 transition duration-300"
                             />
                         </div>
@@ -123,7 +121,7 @@ export default function Principios() {
                                 src="/images/principios/innovacion.svg" 
                                 width={64} 
                                 height={64} 
-                                alt="innovacion" 
+                                alt="" 
                             />
                         </div>
                         <p className="text-center text-[#374151] px-13 mt-9">
@@ -142,13 +140,13 @@ export default function Principios() {
                             src="/images/principios/alianzas.svg" 
                             width={64} 
                             height={64} 
-                            alt="pizarra" 
+                            alt="" 
                         />
                         <Image
                             src="/images/principios/alianzasW.svg"
                             width={64}
                             height={64}
-                            alt="pizarra"
+                            alt=""
                             className="absolute inset-0 m-auto opacity-0 group-hover:opacity-100 transition duration-300"
                         />
                     </div>
@@ -158,7 +156,7 @@ export default function Principios() {
                     </p>
 
                 </article>
-            </main>
+            </div>
         </section>
     )
 }

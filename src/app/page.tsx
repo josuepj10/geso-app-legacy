@@ -64,7 +64,7 @@ export default function Home() {
         </Reveal>
       </article>
       
-      <main>
+      <div>
         <ImageButton
           imageSrc="/images/inicio/imagen_colabora.webp"
           title="Colabora con la Fundación GESO y ayúdanos a promover la equidad social."
@@ -72,7 +72,7 @@ export default function Home() {
           buttonText="Dona aquí"
           buttonHref="/apoyanos"
         />
-      </main>
+      </div>
 
     </>
   )

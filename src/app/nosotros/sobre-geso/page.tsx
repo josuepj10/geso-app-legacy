@@ -23,7 +23,7 @@ export default function misionPage() {
       
       <Mision />
       
-      <main>
+      <div>
         <Vision
           imageSrc="/images/sobre-geso/vision_2.webp"
           title="Visión"
@@ -31,7 +31,7 @@ export default function misionPage() {
           que desarrolla, así como por el rigor con que incorpora la perspectiva de equidad de género, tanto en el plano conceptual como 
           en el metodológico."
         />
-      </main>
+      </div>
 
       <div className="flex justify-center md:my-20 my-10 ">
           <h2 className="md:text-4xl text-2xl font-bold text-[#5B1780]">Historia</h2>

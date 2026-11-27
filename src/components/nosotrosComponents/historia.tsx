@@ -1,5 +1,3 @@
-"use client"
-
 import Image from "next/image";
 
 
@@ -29,7 +27,7 @@ export default function Historia() {
             <div className="w-[122px] h-[122px] border bg-[#FFD11A] rounded-3xl flex items-center justify-center">
                 <Image
                 src="/images/sobre-geso/manosHistoria.svg"
-                alt="Ícono Hover Misión"
+                alt=""
                 width={44}
                 height={44}
                 className="transition duration-300"
@@ -45,7 +43,7 @@ export default function Historia() {
             <div className="w-[122px] h-[122px] border bg-[#5B1780] rounded-3xl flex items-center justify-center">
                 <Image
                 src="/images/sobre-geso/piezas.svg"
-                alt="Ícono Hover Misión"
+                alt=""
                 width={44}
                 height={44}
                 className="transition duration-300"
@@ -89,7 +87,7 @@ export default function Historia() {
             <div className="w-[122px] h-[122px] bg-[#FFD11A] border rounded-3xl flex items-center justify-center">
                 <Image
                 src="/images/sobre-geso/estrecharManos.svg"
-                alt="Ícono Hover Misión"
+                alt=""
                 width={46}
                 height={44}
                 className="transition duration-300"

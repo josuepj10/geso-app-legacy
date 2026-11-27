@@ -1,5 +1,3 @@
-"use client"
-
 import Image from "next/image";
 
 interface ImageButtonProps {
@@ -23,7 +21,7 @@ export default function Vision({
             <div className="relative w-full h-[600px] lg:h-[830px]">
                 <Image
                 src={imageSrc}
-                alt={title}
+                alt=""
                 fill
                 className="object-cover lg:object-[50%_20%] object-[45%_10%] transition duration-300"
                 />

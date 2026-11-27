@@ -1,5 +1,3 @@
-"use client"
-
 import Image from "next/image";
 import Link from "next/link";
 
@@ -22,18 +20,19 @@ export default function ImageButton({
     <section className="mt-20 relative flex flex-col items-center left-1/2 right-1/2 -mx-[50vw] max-w-screen overflow-hidden">
       {/* Imagen de fondo */}
       <div className="relative w-full h-[calc(100vh-4rem)] lg:h-[calc(100vh-5rem)] overflow-hidden">
+        {/* Decorativa: el título de la tarjeta ya describe la sección */}
         <Image
         src={imageSrc}
-        alt={title}
+        alt=""
         fill
+        sizes="100vw"
         className="object-cover"
-        priority
         />
       </div>
 
       {/* Caja de texto y botón */}
 
-      <main className="absolute bottom-10 md:bottom-20 left-0 right-0 px-4 sm:px-10 xl:px-0 ">
+      <div className="absolute bottom-10 md:bottom-20 left-0 right-0 px-4 sm:px-10 xl:px-0 ">
         <article
             className="
             mx-auto w-full max-w-[1014px]
@@ -51,7 +50,6 @@ export default function ImageButton({
 
           <Link
           href={buttonHref}
-          aria-label={`Ir a ${buttonText}`}
           className="
               self-start mt-2 w-full sm:w-[180px] py-3 text-lg bg-[#5B1780] 
               text-white hover:text-[#5B1780] rounded-full hover:bg-[#FFD11A] 
@@ -61,7 +59,7 @@ export default function ImageButton({
           {buttonText}
           </Link>
         </article>
-      </main>
+      </div>
     </section>
   );
 }

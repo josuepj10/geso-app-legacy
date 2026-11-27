@@ -1,40 +1,43 @@
-"use client";
-
 import Image from "next/image";
 
 const icons = [
-  "/images/iconos-marquee/REDNAM.webp",
-  "/images/iconos-marquee/redcepaz.webp",
-  "/images/iconos-marquee/FORO.webp",
-  "/images/iconos-marquee/CANAESS.webp",
+  { src: "/images/iconos-marquee/REDNAM.webp", alt: "REDNAM, Red Nacional de Organizaciones Civiles para las Migraciones" },
+  { src: "/images/iconos-marquee/redcepaz.webp", alt: "Red CEPAZ" },
+  { src: "/images/iconos-marquee/FORO.webp", alt: "Foro Permanente sobre Población Migrante y Refugiada" },
+  { src: "/images/iconos-marquee/CANAESS.webp", alt: "CANAESS, Cámara Nacional de la Economía Social Solidaria" },
 ];
 
-export default function IconMarquee() {
-  
-  const repeatCount = 30; 
-  const repeatedIcons = Array.from({ length: repeatCount }, () => icons).flat();
+// Cada copia repite los 4 logos 3 veces (12 × 160 px = 1920 px) para cubrir
+// pantallas anchas. La animación desplaza -50%, es decir, exactamente una copia.
+const REPETICIONES_POR_COPIA = 3;
+const copia = Array.from({ length: REPETICIONES_POR_COPIA }, () => icons).flat();
 
+function Copia({ oculta }: { oculta?: boolean }) {
+  return (
+    <div className="flex shrink-0" aria-hidden={oculta || undefined}>
+      {copia.map((icon, i) => (
+        <div key={i} className="relative w-24 h-24 flex-shrink-0 mr-16">
+          <Image
+            src={icon.src}
+            // Solo la primera vuelta de la primera copia se anuncia a lectores de pantalla.
+            alt={!oculta && i < icons.length ? icon.alt : ""}
+            fill
+            sizes="96px"
+            className="object-contain"
+          />
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export default function IconMarquee() {
   return (
     <div className="relative overflow-hidden w-full py-6">
-      
-      <div
-        className="pointer-events-none absolute inset-0 z-10 "
-                    
-      />
-      {/*Efecto que desaparece a los lados para el marquee: bg-[linear-gradient(to_right,_white_0%,_transparent_10%,_transparent_90%,_white_100%)]*/}
-
       {/* Cinta animada */}
-      <div className="flex animate-marquee space-x-16">
-        {repeatedIcons.map((src, i) => (
-          <div key={i} className="relative w-24 h-24 flex-shrink-0">
-            <Image
-              src={src}
-              alt={`Icon ${i + 1}`}
-              fill
-              className="object-contain"
-            />
-          </div>
-        ))}
+      <div className="animate-marquee">
+        <Copia />
+        <Copia oculta />
       </div>
     </div>
   );

@@ -21,6 +21,7 @@ export default function NavbarButton({ href, special, children }: NavbarButtonPr
   return (
     <Link
       href={href}
+      aria-current={isActive ? "page" : undefined}
       className={`xl:px-5 px-3 py-1.5 rounded-[30px] font-medium transition-colors
         ${
           special

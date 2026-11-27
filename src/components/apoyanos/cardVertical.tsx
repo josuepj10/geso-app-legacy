@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React, { useRef, useEffect, type RefObject } from "react";
+import React, { useRef, useEffect, useState, useCallback, type RefObject } from "react";
 import { useInView } from "@/hooks/useInView";
 import type { LottieRefCurrentProps } from "lottie-react";
 
@@ -10,7 +10,10 @@ export interface CardProps {
   text: React.ReactNode;
   media?:
     | React.ReactNode
-    | ((lottieRef: RefObject<LottieRefCurrentProps | null>) => React.ReactNode);
+    | ((
+        lottieRef: RefObject<LottieRefCurrentProps | null>,
+        onReady: () => void
+      ) => React.ReactNode);
   button: string;
   href: string;
   animationDelay?: number;
@@ -25,6 +28,9 @@ export default function CardIcons({
   animationDelay = 0,
 }: CardProps) {
   const lottieRef = useRef<LottieRefCurrentProps | null>(null);
+  // La animación se carga de forma diferida; solo se reproduce cuando ya está lista.
+  const [ready, setReady] = useState(false);
+  const onReady = useCallback(() => setReady(true), []);
 
   const { ref: cardRef, isInView } = useInView<HTMLElement>({
     threshold: 0.2,
@@ -32,14 +38,14 @@ export default function CardIcons({
   });
 
   useEffect(() => {
-    if (!isInView) return;
+    if (!isInView || !ready) return;
 
     const timeout = setTimeout(() => {
       lottieRef.current?.goToAndPlay(0, true);
     }, animationDelay);
 
     return () => clearTimeout(timeout);
-  }, [isInView, animationDelay]);
+  }, [isInView, ready, animationDelay]);
 
   return (
     <article
@@ -49,8 +55,9 @@ export default function CardIcons({
       className="w-full max-w-[432px] h-full bg-white rounded-[55px] overflow-hidden outline hover:shadow-xl transition-shadow duration-300 ease-in-out flex flex-col p-3"
     >
       {media && (
-        <div className="flex justify-center items-center px-2">
-          {typeof media === "function" ? media(lottieRef) : media}
+        // Ilustración decorativa
+        <div aria-hidden="true" className="flex justify-center items-center px-2">
+          {typeof media === "function" ? media(lottieRef, onReady) : media}
         </div>
       )}
 

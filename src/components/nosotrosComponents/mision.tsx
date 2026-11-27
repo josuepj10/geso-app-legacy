@@ -1,5 +1,3 @@
-"use client"
-
 import Image from "next/image";
 import { Reveal } from "@/components/reveal";
 import { AcademicCapIcon } from "@heroicons/react/24/outline";
@@ -36,10 +34,10 @@ export default function Mision() {
             {/* Imagen principal */}
             <Image 
               src="/images/sobre-geso/mision_3.webp"
-              alt="Misión Fundación Genero y Sociedad" 
-              fill 
+              alt="" 
+              fill
+              sizes="(min-width: 1024px) 600px, 100vw"
               className="object-cover transition duration-300"
-              priority
             />
 
             <div className="absolute inset-0 bg-[#5B1780]/65 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition duration-300"></div>
@@ -47,7 +45,7 @@ export default function Mision() {
             {/* Imagen hover */}
             <Image
               src="/images/sobre-geso/iconoBandera.svg"
-              alt="Imagen hover ícono misión Fundación Género y Sociedad"
+              alt=""
               width={197}
               height={247}
               className="absolute inset-0 m-auto opacity-0 group-hover:opacity-100 transition duration-300"

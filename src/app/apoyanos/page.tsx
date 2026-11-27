@@ -13,7 +13,7 @@ export default function ApoyoPage() {
 
   return (
     <section className="flex flex-col items-center gap-8">
-      <main className="leading-relaxed text-[#374151] text-lg text-center my-3 mx-auto max-w-[1050px]">
+      <div className="leading-relaxed text-[#374151] text-lg text-center my-3 mx-auto max-w-[1050px]">
         
         <h1 className=" flex justify-center pb-2 text-[32px] md:text-[44px] text-[#5B1780] font-bold mb-2 ">
           Haz parte del cambio
@@ -25,7 +25,7 @@ export default function ApoyoPage() {
             alianza institucional nos acerca a una sociedad más justa, inclusiva y equitativa.
           </p>
         </Reveal>
-      </main>  
+      </div>  
 
       <Verticales/>
       
