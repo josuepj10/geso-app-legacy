@@ -36,7 +36,7 @@ export default function ImageGESO({ imageSrc, title, imageClassName }: ImageGESO
           className={`object-cover transition-all duration-500 ease-in-out ${imageClassName || ""}`}
         />
 
-        <div className="absolute inset-0 bg-[#5B1780]/60" />
+        <div className="absolute inset-0 bg-geso-purple/60" />
 
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
           <h1 className="text-[40px] lg:text-[60px] font-semibold text-white mb-4">

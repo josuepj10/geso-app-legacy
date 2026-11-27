@@ -13,14 +13,14 @@ export default function ApoyoPage() {
 
   return (
     <section className="flex flex-col items-center gap-8">
-      <div className="leading-relaxed text-[#374151] text-lg text-center my-3 mx-auto max-w-[1050px]">
+      <div className="leading-relaxed text-geso-ink text-lg text-center my-3 mx-auto max-w-[1050px]">
         
-        <h1 className=" flex justify-center pb-2 text-[32px] md:text-[44px] text-[#5B1780] font-bold mb-2 ">
+        <h1 className=" flex justify-center pb-2 text-[32px] md:text-[44px] text-geso-purple font-bold mb-2 ">
           Haz parte del cambio
         </h1>       
 
         <Reveal>
-          <p className="text-[#374151] leading-relaxed text-lg">
+          <p className="text-geso-ink leading-relaxed text-lg">
             En la Fundación Género y Sociedad (GESO) creemos que la transformación social se construye en colectivo. Cada donación, cada hora de voluntariado y cada
             alianza institucional nos acerca a una sociedad más justa, inclusiva y equitativa.
           </p>
@@ -29,9 +29,9 @@ export default function ApoyoPage() {
 
       <Verticales/>
       
-      <div className="leading-relaxed text-[#374151] text-lg text-center my-12 mx-auto max-w-[1050px]">
+      <div className="leading-relaxed text-geso-ink text-lg text-center my-12 mx-auto max-w-[1050px]">
           
-        <h2 className="flex justify-center pb-2 text-[32px] md:text-[44px] text-[#5B1780] font-bold mb-2 ">
+        <h2 className="flex justify-center pb-2 text-[32px] md:text-[44px] text-geso-purple font-bold mb-2 ">
           Tu compromiso transforma vidas
         </h2>
         <Reveal>

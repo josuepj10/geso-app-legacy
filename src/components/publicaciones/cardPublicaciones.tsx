@@ -33,11 +33,11 @@ export default function CardPublicaciones({ title, text, image, button, href, im
       <div className=" flex flex-col flex-1 justify-start gap-6 sm:px-8 px-4">
           
         {/* Título */}
-        <h2 className="text-left text-[#5B1780] font-bold text-2xl pt-4">{title}</h2>
+        <h2 className="text-left text-geso-purple font-bold text-2xl pt-4">{title}</h2>
 
         {/* Texto */}
         <div
-          className="text-lg text-[#374151] mt-2 text-center xl:text-left mb-2
+          className="text-lg text-geso-ink mt-2 text-center xl:text-left mb-2
           [&_p]:mb-4 [&_ul]:list-disc [&_ul]:list-inside [&_ul]:mt-3 [&_li]:mb-2 [&_strong]:font-semibold"          
         >
           {text }
@@ -49,8 +49,8 @@ export default function CardPublicaciones({ title, text, image, button, href, im
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#5B1780] rounded-4xl text-white hover:text-[#5B1780] hover:shadow-md text-lg w-full py-4 
-            hover:bg-[#FFD11A] transition-colors duration-300 cursor-pointer mb-4 sm:mb-8 inline-block text-center mt-auto"           
+            className="bg-geso-purple rounded-4xl text-white hover:text-geso-purple hover:shadow-md text-lg w-full py-4 
+            hover:bg-geso-yellow transition-colors duration-300 cursor-pointer mb-4 sm:mb-8 inline-block text-center mt-auto"           
           >
             {button}
           </Link>

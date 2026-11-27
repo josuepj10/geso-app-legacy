@@ -6,7 +6,7 @@ import PartnershipAnimation from "@/lottie/Partnership.json";
 
 interface PartnershipIconProps {
   lottieRef: RefObject<LottieRefCurrentProps | null>;
-  onReady?: () => void;
+  onReady: () => void;
 }
 
 export default function PartnershipIcon({ lottieRef, onReady }: PartnershipIconProps) {

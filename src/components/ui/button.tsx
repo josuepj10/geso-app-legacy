@@ -19,10 +19,6 @@ const buttonVariants = cva(
         ghost:
           "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
         link: "text-primary underline-offset-4 hover:underline",
-        customleft: "bg-[#5B1780] !text-white rounded-lg relative flex items-center sm:justify-center md:justify-end px-0 ",
-        customright: "bg-[#5B1780] !text-white rounded-lg relative flex items-center sm:justify-center md:justify-start px-0 ",
-        customnumber: "text-[#374751] hover:text-[#5B1780] rounded-lg transition-colors",
-        
       },
       size: {
         default: "h-9 px-1.5 py-2 ",

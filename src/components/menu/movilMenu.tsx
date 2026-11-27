@@ -29,12 +29,12 @@ export default function MovilMenu() {
 
   // Estilos unificados
   const baseBtn = "w-full px-4 py-3 rounded-[30px] transition-colors text-lg"
-  const activeBtn = "bg-[#5B1780] text-white transition-colors duration-300"
-  const inactiveBtn = "hover:bg-gray-100 text-[#374151] transition-colors duration-300"
+  const activeBtn = "bg-geso-purple text-white transition-colors duration-300"
+  const inactiveBtn = "hover:bg-gray-100 text-geso-ink transition-colors duration-300"
 
   const childBase = "px-3 py-2 rounded-[30px] text-lg border transition-colors duration-300"
-  const childActive = "bg-[#5B1780] text-white border-none transition-colors duration-300 "
-  const childInactive = "border-none hover:bg-white text-[#374151] transition-colors duration-300"
+  const childActive = "bg-geso-purple text-white border-none transition-colors duration-300 "
+  const childInactive = "border-none hover:bg-white text-geso-ink transition-colors duration-300"
 
   return (
     <Sheet open={isOpen} onOpenChange={(abierto) => (abierto ? setIsOpen(true) : cerrar())}>
@@ -57,9 +57,9 @@ export default function MovilMenu() {
             className="origin-top"
           >
             {isOpen ? (
-              <X aria-hidden="true" className="h-10 w-10 text-[#5B1780]" strokeWidth={3} />
+              <X aria-hidden="true" className="h-10 w-10 text-geso-purple" strokeWidth={3} />
             ) : (
-              <FaBars aria-hidden="true" className="h-9 w-9 text-[#5B1780]" />
+              <FaBars aria-hidden="true" className="h-9 w-9 text-geso-purple" />
             )}
           </motion.div>
         </motion.button>
@@ -69,7 +69,7 @@ export default function MovilMenu() {
       <SheetContent
         side="bottom"
         showCloseButton={false}
-        overlayClassName="bg-[#5B1780]/20 backdrop-blur-sm"
+        overlayClassName="bg-geso-purple/20 backdrop-blur-sm"
         aria-describedby={undefined}
         className="h-[80%] max-h-[80vh] gap-0 border-none bg-white p-0 shadow-none"
       >
@@ -109,7 +109,7 @@ export default function MovilMenu() {
                           aria-hidden="true"
                           className={`h-6 w-6 transition-transform duration-300
                             ${dropdownOpen ? "rotate-180" : ""}
-                            ${dropdownOpen || active ? "text-white" : "text-[#374151]"}
+                            ${dropdownOpen || active ? "text-white" : "text-geso-ink"}
                           `}
                         />
                       </button>
@@ -123,7 +123,7 @@ export default function MovilMenu() {
                             animate={{ height: "auto", opacity: 1 }}
                             exit={{ height: 0, opacity: 0 }}
                             transition={{ duration: 0.2 }}
-                            className="p-4 bg-[#FFD11A] rounded-4xl flex flex-col gap-2 mt-2"
+                            className="p-4 bg-geso-yellow rounded-4xl flex flex-col gap-2 mt-2"
                           >
                             {item.children.map((child) => {
                               const isChildActive = isRouteActive(child.href)
@@ -165,7 +165,7 @@ export default function MovilMenu() {
           {/* Cierre para teclado y lectores de pantalla; solo se ve al recibir foco */}
           <SheetClose
             className="sr-only focus:not-sr-only focus:mt-6 focus:mb-8 focus:px-6 focus:py-3 focus:rounded-full
-                       focus:border focus:border-[#5B1780] focus:text-[#5B1780] focus:text-lg"
+                       focus:border focus:border-geso-purple focus:text-geso-purple focus:text-lg"
           >
             Cerrar menú
           </SheetClose>

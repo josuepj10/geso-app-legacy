@@ -14,18 +14,18 @@ export default function GeneroComercioPage() {
   return (
     
     <div className="md:mb-20 lg:mb-17 mb-10 ">
-      <div className="leading-relaxed text-[#374151] text-lg my-6">
+      <div className="leading-relaxed text-geso-ink text-lg my-6">
 
         <div className="flex justify-center pb-5 ">
         
-          <h1 className=" flex justify-center text-center text-[32px] md:text-[44px] text-[#5B1780] font-bold ">
+          <h1 className=" flex justify-center text-center text-[32px] md:text-[44px] text-geso-purple font-bold ">
             Género y comercio internacional
           </h1>
 
         </div>
 
         <Reveal>
-          <p className="text-[#374151] leading-relaxed text-lg lg:text-center">
+          <p className="text-geso-ink leading-relaxed text-lg lg:text-center">
             Propuestas pioneras que analizan cómo los tratados y dinámicas comerciales afectan de manera diferenciada a mujeres y hombres. 
           </p>
         </Reveal>
@@ -33,7 +33,7 @@ export default function GeneroComercioPage() {
       
       <div className="flex justify-center pt-8 pb-4  ">
         
-        <h2 className="text-center xl:text-left text-xl font-bold text-[#374151] ">
+        <h2 className="text-center xl:text-left text-xl font-bold text-geso-ink ">
           Foro Desafios de género para el comercio exterior de Costa Rica (18 de julio de 2024).
         </h2>
 

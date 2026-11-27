@@ -10,27 +10,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/nosotros/alianzas" },
 }
 
-export default function alianzasPage() {
+export default function AlianzasPage() {
   return (
     <>
       <ImageGESO 
-        imageSrc="/images/alianzas/estrechar_manos.webp" 
+        imageSrc="/images/alianzas/estrechar-manos.webp" 
         title="Nuestras alianzas"
-        imageClassName="#"
       />
       
       <div className="md:my-25 my-10 ">
 
-        <div className="leading-relaxed text-center text-[#374151] text-lg mt-8 mb-20 mx-auto max-w-[1040px]">
+        <div className="leading-relaxed text-center text-geso-ink text-lg mt-8 mb-20 mx-auto max-w-[1040px]">
           <p>
-            En la <span className="text-[#5B1780] text-[24px] font-bold">Fundación Género y Sociedad (GESO)</span> creemos en el trabajo colectivo 
+            En la <span className="text-geso-purple text-[24px] font-bold">Fundación Género y Sociedad (GESO)</span> creemos en el trabajo colectivo 
             como motor de transformación. Por eso, formamos parte activa de redes nacionales y regionales que potencian nuestro impacto, 
             fortalecen nuestra voz y multiplican las oportunidades de incidencia.
           </p>
 
         </div>
 
-        <p className="text-center text-xl text-[#374151] mb-2 font-bold">
+        <p className="text-center text-xl text-geso-ink mb-2 font-bold">
           Somos miembros de:
         </p>
 

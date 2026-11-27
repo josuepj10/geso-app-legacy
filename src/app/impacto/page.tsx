@@ -8,13 +8,13 @@ export const metadata: Metadata = {
 }
 
 
-export default function impactoPage() {
+export default function ImpactoPage() {
   return (
     
     
-    <div className="leading-relaxed text-[#374151] text-lg md:my-20 lg:mb-55 my-10 ">
+    <div className="leading-relaxed text-geso-ink text-lg md:my-20 lg:mb-55 my-10 ">
       <Reveal>
-        <p className="text-[#374151] leading-relaxed text-lg">
+        <p className="text-geso-ink leading-relaxed text-lg">
           Historias reales, datos de alcance, testimonios de participantes, indicadores de impacto. 
         </p>
       </Reveal>
