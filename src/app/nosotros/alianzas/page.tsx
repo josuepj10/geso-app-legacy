@@ -1,8 +1,14 @@
-"use client"
-
+import type { Metadata } from "next"
 import IconMarquee from "@/components/IconMarquee"
 import ImageGESO from "@/components/imageGESO"
 import Alianzas from "@/components/nosotrosComponents/alianzas"
+
+export const metadata: Metadata = {
+  title: "Nuestras alianzas",
+  description:
+    "GESO forma parte de redes nacionales y regionales, como REDNAM, que potencian su impacto y su incidencia en las políticas públicas.",
+  alternates: { canonical: "/nosotros/alianzas" },
+}
 
 export default function alianzasPage() {
   return (

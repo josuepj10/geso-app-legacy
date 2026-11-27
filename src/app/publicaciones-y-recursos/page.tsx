@@ -1,8 +1,14 @@
-"use client"
-
+import type { Metadata } from "next"
 import { Reveal } from "@/components/reveal"
 import CardPublicaciones from "@/components/publicaciones/cardPublicaciones";
 
+
+export const metadata: Metadata = {
+  title: "Publicaciones y recursos",
+  description:
+    "Manuales, investigaciones y documentos de GESO sobre equidad de género, migración, violencia, ciudadanía y comercio internacional.",
+  alternates: { canonical: "/publicaciones-y-recursos" },
+}
 
 export default function RecursosPage() {
   const cards = [

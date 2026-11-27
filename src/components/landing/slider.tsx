@@ -39,7 +39,7 @@ const slides = [
     ),
     button: {
       label: "Conocer más",
-      href: "/proyectos/democracia-de-genero",
+      href: "/proyectos/democracia-de-genero-y-participacion-ciudadana",
     },
   },
 ]
@@ -67,7 +67,10 @@ export default function Slider() {
         effect="slide"
         loop
       >
-        {slides.map((slide, index) => (
+        {slides.map((slide, index) => {
+          // El título de la primera diapositiva es el h1 del inicio.
+          const Heading = index === 0 ? "h1" : "h2"
+          return (
           <SwiperSlide key={index}>
             <div className="relative w-full h-[calc(100vh-4rem)] lg:h-[calc(100vh-5rem)] overflow-hidden">
               <Image
@@ -91,9 +94,9 @@ export default function Slider() {
               > {/* Otra opcion es usar botton-20 y el top-4/11 borrarlo */}
 
                 {/* Título */}
-                <h2 className="xl:text-6xl text-[40px] font-bold text-white">
+                <Heading className="xl:text-6xl text-[40px] font-bold text-white">
                   {slide.title}
-                </h2>
+                </Heading>
 
                 {/* Texto opcional */}
                 {slide.text && (
@@ -113,7 +116,8 @@ export default function Slider() {
               </div>
             </div>
           </SwiperSlide>
-        ))}
+          )
+        })}
       </Swiper>
     </header>
   )

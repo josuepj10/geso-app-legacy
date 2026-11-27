@@ -1,7 +1,13 @@
-"use client";
-
+import type { Metadata } from "next"
 import { Reveal } from "@/components/reveal"
 import Verticales from "@/components/apoyanos/cardsVerticales"
+
+export const metadata: Metadata = {
+  title: "Apóyanos",
+  description:
+    "Apoya a la Fundación GESO con una donación, como voluntaria o voluntario, o con una alianza institucional por una sociedad más equitativa.",
+  alternates: { canonical: "/apoyanos" },
+}
 
 export default function ApoyoPage() {
 

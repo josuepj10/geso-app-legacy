@@ -1,9 +1,12 @@
-"use client"
-
+import type { Metadata } from "next"
 import { Reveal } from "@/components/reveal"
 import Slider from "@/components/landing/slider"
 import ImageButton from "@/components/landing/imageButton"
 import CardInicio from "@/components/landing/cardInicio"
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+}
 
 export default function Home() {
   return (
@@ -13,9 +16,9 @@ export default function Home() {
       {/* h2 text-2xl font-bold text-[#5B1780] */}
       {/*h1 md:text-3xl text-2xl font-bold text-[#5B1780] */}
         
-      <h1 className="mx-auto w-full p-6 text-center lg:mt-10 mt-6 md:text-[40px] text-2xl font-bold text-[#5B1780] ">
+      <h2 className="mx-auto w-full p-6 text-center lg:mt-10 mt-6 md:text-[40px] text-2xl font-bold text-[#5B1780] ">
         Noticias más recientes
-      </h1>
+      </h2>
 
       <article className="my-2 lg:my-8 gap-8 max-w-[1362px] mx-auto
                       lg:grid-cols-2

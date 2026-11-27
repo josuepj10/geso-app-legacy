@@ -1,15 +1,20 @@
-"use client";
-
+import type { Metadata } from "next"
 import Card from "@/components/proyectos/cards";
+
+export const metadata: Metadata = {
+  title: "Proyectos",
+  description:
+    "Proyectos de GESO en democracia de género, violencia de género, migración y derechos humanos, medios de comunicación y comercio internacional.",
+  alternates: { canonical: "/proyectos" },
+}
 
 export default function Proyectos() {
   return (
     <div>
-      <div className="flex justify-center text-[#374151] md:text-3xl text-2xl font-bold my-6">
+      <h1 className="flex justify-center text-[#374151] md:text-3xl text-2xl font-bold my-6">
         <span>Proyectos</span>
         <span className="text-[#5B1780]">&nbsp;GESO</span>
-
-      </div>
+      </h1>
       
       {/* cards */}
       

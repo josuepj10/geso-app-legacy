@@ -1,10 +1,16 @@
-"use client"
-
+import type { Metadata } from "next"
 import ImageGESO from "@/components/imageGESO";
 import Mision from "@/components/nosotrosComponents/mision";
 import Vision from "@/components/nosotrosComponents/vision";
 import Historia from "@/components/nosotrosComponents/historia";
 
+
+export const metadata: Metadata = {
+  title: "Misión, visión e historia",
+  description:
+    "Conoce la misión, la visión y la historia de la Fundación Género y Sociedad (GESO), organización sin fines de lucro creada en Costa Rica en 1993.",
+  alternates: { canonical: "/nosotros/sobre-geso" },
+}
 
 export default function misionPage() {
   return (
